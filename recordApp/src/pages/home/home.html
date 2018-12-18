@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Admin
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+
+
+  <ion-card class="user" *ngFor="let audio of filteredaudioList; index as i;">
+
+    <ion-card-content>
+      <ion-item >
+          <ion-avatar item-left>
+              <img src="assets/imgs/avatar-img.png">
+            </ion-avatar>
+        <button ion-button item-right clear item-end large (tap)="playAudio(audio.filename, i)"><ion-icon name="play"></ion-icon></button>
+        <h5>To Admin</h5>
+            <h6>{{audio.time}}</h6>
+            <h6>{{audio.date}}</h6>
+      </ion-item>
+    </ion-card-content>
+  
+  </ion-card>
+
+</ion-content>
+
+<ion-footer>
+    <div class="record">
+        <button id="recordBtn" round icon-right ion-button primary (tap)="stopRecord()" *ngIf="recording">Stop Record <ion-icon name="mic-off"></ion-icon></button>
+        <button id="recordBtn" round icon-right ion-button primary (tap)="startRecord()" *ngIf="!recording">Start Record <ion-icon name="mic"></ion-icon></button>
+      </div>
+</ion-footer>

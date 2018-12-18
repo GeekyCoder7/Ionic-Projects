@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  
+<form action="../php/login.php" method="POST">
+  <ion-list>
+  <ion-item>
+    <ion-label floating>Username</ion-label>
+    <ion-input type="text" #username></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Password</ion-label>
+    <ion-input type="password"  #password></ion-input>
+  </ion-item>
+  
+</ion-list>
+</form>
+<div padding>
+  <button type="submit" round block ion-button icon-left (tap)="signIn()">
+   <ion-icon name="log-in"></ion-icon>
+    Sign In</button>
+    <p>Don't have an account? <a href="" (tap)="goToSignUp()">Sign up</a></p>
+</div>
+
+</ion-content>

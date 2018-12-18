@@ -1,0 +1,7 @@
+{
+  "name": "favoriteApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
